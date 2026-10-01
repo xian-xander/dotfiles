@@ -1,0 +1,7 @@
+@define-color background {{colors.surface.default.hex}};
+@define-color button-bg {{colors.surface_container.default.hex}};
+@define-color button-bg-hover {{colors.surface_variant.default.hex}};
+@define-color text {{colors.on_surface.default.hex}};
+@define-color primary {{colors.primary.default.hex}};
+@define-color on-primary {{colors.on_primary.default.hex}};
+@define-color border-color {{colors.outline_variant.default.hex}};

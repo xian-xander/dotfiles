@@ -1,0 +1,4 @@
+* {
+    active-border: #ffffff;
+    inactive-border: #474747;
+}

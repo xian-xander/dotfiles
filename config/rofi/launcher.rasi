@@ -1,0 +1,80 @@
+configuration {
+    display-drun: ">";
+    drun-display-format: "{name}";
+    show-icons: true;
+    disable-history: false;
+}
+
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+    text-color:       white;
+    font:             "sans-serif 11";
+}
+
+window {
+    width:            480px;
+    background-color: rgba(10, 10, 15, 0.88);
+    border:           2px;
+    border-color:     @active-border;
+    border-radius:    12px;
+    padding:          20px;
+    location:         center;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing:  15px;
+}
+
+inputbar {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius:    8px;
+    padding:          10px 15px;
+    children:         [prompt, entry];
+}
+
+prompt {
+    text-color: @active-border;
+    font:       "sans-serif bold 12";
+    margin:     0px 10px 0px 0px;
+}
+
+entry {
+    placeholder:      "Search apps...";
+    placeholder-color: rgba(255, 255, 255, 0.3);
+    text-color:       white;
+}
+
+listview {
+    columns:      1;
+    lines:        9;
+    spacing:      5px;
+    fixed-height: false;
+    scrollbar:    false;
+}
+
+element {
+    padding:       10px;
+    border-radius: 10px;
+    orientation:   horizontal;
+    spacing:       15px;
+}
+
+element selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    border:           2px;
+    border-color:     @active-border;
+}
+
+element-icon {
+    size:             32px;
+    vertical-align:   0.5;
+}
+
+element-text {
+    horizontal-align: 0.0;
+    vertical-align:   0.5;
+    font:             "sans-serif 11";
+}

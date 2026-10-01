@@ -1,0 +1,32 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    "spacing": 3, // Gaps between modules
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "group/tray-drawer",
+        "mpris#sidra",
+        "mpris#spotify",
+        "idle_inhibitor",
+        "pulseaudio",
+        "group/net",
+        "group/hardware",
+        "backlight",
+        "group/battery",
+        "battery#bat2",
+        
+        "clock",
+        "custom/power"
+    ],
+    "include": [
+		"~/.config/waybar/modules.json"
+	]
+}

@@ -1,0 +1,242 @@
+{
+  "group/net": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-net",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "network#icon",
+      "network#ip"
+    ]
+  },
+  "network#icon": {
+    "format-wifi": "\uf1eb   {essid} ({signalStrength}%)",
+    "format-ethernet": "ETHERNET \uf796",
+    "format-linked": "{ifname} (No IP) \uf796",
+    "format-disconnected": "Disconnected \u26a0",
+    "tooltip": false
+  },
+  "network#ip": {
+    "format-wifi": "{ipaddr}",
+    "format-ethernet": "{ipaddr}",
+    "format-disconnected": "No IP",
+    "tooltip": false
+  },
+  "custom/arch": {
+    "format": "\udb82\udcc7",
+    "tooltip": true,
+    "tooltip-format": "btw"
+  },
+  "hyprland/window": {
+    "format": "",
+    "icon": true,
+    "icon-size": 20
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+    "format-icons": {
+      "urgent": "\uf06a",
+      "active": "\uf192",
+      "default": "\uf111"
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "\uf06e",
+      "deactivated": "\uf070"
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%{format_source}",
+    "format-bluetooth": "{icon}  {volume}% \uf294{format_source}",
+    "format-bluetooth-muted": "{icon} \uf294{format_source}",
+    "format-muted": "{icon}{format_source}",
+    "format-source": "",
+    "format-source-muted": " \uf131",
+    "format-icons": {
+      "headphone": "\uf025",
+      "headphone-muted": "\udb80\uded0",
+      "hands-free": "\uee59",
+      "hands-free-muted": "\udb80\uded0",
+      "headset": "\uee59",
+      "headset-muted": "\udb80\uded0",
+      "phone": "\uf095",
+      "phone-muted": "\udb80\uded0",
+      "portable": "\uf095",
+      "portable-muted": "\udb80\uded0",
+      "car": "\uf1b9",
+      "car-muted": "\udb80\uded0",
+      "default": [
+        "\uf026",
+        "\uf027",
+        "\uf028"
+      ],
+      "default-muted": "\ueb24"
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "\uf1eb   {essid} ({signalStrength}%)",
+    "format-ethernet": "ETHERNET \uf796",
+    "tooltip": false,
+    "format-linked": "{ifname} (No IP) \uf796",
+    "format-disconnected": "Disconnected \u26a0"
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-hardware",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "cpu",
+      "memory",
+      "temperature"
+    ]
+  },
+  "cpu": {
+    "format": "\uf2db  {usage}%",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "\uf0c9  {}%",
+    "tooltip": true
+  },
+  "temperature": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 100,
+    "format-critical": "\uf2c7 {temperatureC}",
+    "format": "\uf2c9 {temperatureC}\u00b0C"
+  },
+  "hyprland/language": {
+    "format": "\uf0ac  {}",
+    "format-en": "EN",
+    "format-es": "ES"
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "\ue38d",
+      "\ue3d3",
+      "\ue3d1",
+      "\ue3cf",
+      "\ue3ce",
+      "\ue3cd",
+      "\ue3ca",
+      "\ue3c8",
+      "\ue39b"
+    ]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  {capacity}%",
+    "format-charging": "\uf5e7  {capacity}%",
+    "format-plugged": "\uf1e6  {capacity}%",
+    "format-alt": "{time}  {icon}",
+    "format-icons": [
+      "\uf244",
+      "\uf243",
+      "\uf242",
+      "\uf241",
+      "\uf240"
+    ]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "clock": {
+    "format": "\uf017 {:%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "custom/tray-icon": {
+    "format": "\uf104",
+    "tooltip": true,
+    "tooltip-format": "Aplicaciones en segundo plano"
+  },
+  "group/tray-drawer": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-tray",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/tray-icon",
+      "tray"
+    ]
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    "show-passive-items": true
+  },
+  "group/battery": {
+    "orientation": "horizontal",
+    "modules": [
+      "battery",
+      "power-profiles-daemon"
+    ],
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "power-drawer",
+      "transition-left-to-right": true
+    }
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "\uf0e7",
+      "performance": "\uf0e7",
+      "balanced": "\uf24e",
+      "power-saver": "\uf06c"
+    }
+  },
+  "custom/power": {
+    "format": "\uf011",
+    "tooltip": false,
+    "on-click": "wlogout"
+  },
+  "mpris#spotify": {
+    "player": "spotify",
+    "format": "\uf1bc {title}",
+    "format-paused": "\uf1bc <s>{title}</s>",
+    "tooltip-format": "{title} - {artist} (Spotify)"
+  },
+  "mpris#sidra": {
+    "player": "sidra",
+    "format": "\uf179 {title}",
+    "format-paused": "\uf179 <s>{title}</s>",
+    "tooltip-format": "{title} - {artist} (Apple Music)"
+  }
+}
